@@ -1,12 +1,13 @@
 #include<iostream>
 #include<fstream>
 
-/** added <vector>, <cstdlib>, <ctime>, and <random> for modern C++ random generation and other to dos */
+/** added <vector>, <string>, <cstdlib>, <ctime>, and <random> for modern C++ random generation and other to dos */
 
 #include <vector> 
 #include <cstdlib>
 #include <ctime> 
 #include <random> 
+#include <string>
 
 using namespace std;
 
@@ -107,12 +108,13 @@ if (!writeFile("Student_question_bank.csv", roster, qBank)) {
     return 1;
 }
 
-return 0;
+cout << "Student_question_bank.csv created successfully!" << endl;
     // printVec(roster);
     // printVec(qBank);
 
     // cout << "Size of roster: " << roster.size() << endl; 
     // cout << "Size of qBank: " << qBank.size() << endl;
+    return 0;
 }
 
 //------------------------DECLARATIONS-------------------------------------------
@@ -126,7 +128,6 @@ void promptFile(vector<string> & v){
     cin >> myFile;
     readFile(myFile, v);
 }
-
 
 /**
  * @brief prints out the elements in v
