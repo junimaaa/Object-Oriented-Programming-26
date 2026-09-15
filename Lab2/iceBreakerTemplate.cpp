@@ -14,13 +14,13 @@ using namespace std;
 void promptFile(vector<string> &); 
 void printVec(vector<string>);
 
-/** added prototypes and put in bool for later declarations */
+/** added prototypes and put in bool for later declarations and const added as well for later declarations */
 
 bool readFile(string filename, vector<string> & vec);
 bool writeFile(string, const vector<string> &, const vector<string> &);
 int ranGen(int size); 
 
-/**to do for int questionSize and random generation using <random> */
+/**to do for int questionSize and random generation using <random> so that it's not a fixed number */
 
 int ranGen(int questionSize){
     random_device randomDevice;
@@ -65,7 +65,7 @@ bool readFile(string filename, vector<string> & vec) {
  * @param v1: vector<string> (for questions)
  */
 
-/**added const reference from the porotype and return bool as it's notified if succeeded or not */
+/**added const reference from the prototype and return bool as it's notified if succeeded or not */
 
 bool writeFile(string filename, const vector<string> & v0, const vector<string> & v1){
 
@@ -89,21 +89,30 @@ bool writeFile(string filename, const vector<string> & v0, const vector<string> 
     return true;
 }
 
-
+/**return 1 added to make sure our results from the bool actually show up*/
 int main()
 {
     vector<string> roster;
     vector<string> qBank;
-    readFile("2310_F26_Rosters.csv", roster);
-    readFile("Questions.csv", qBank);
+
+if (!readFile("2310_F26_Rosters.csv", roster)) {
+    return 1;
+}
+
+if (!readFile("Questions.csv", qBank)) {
+    return 1;
+}
+
+if (!writeFile("Student_question_bank.csv", roster, qBank)) {
+    return 1;
+}
+
+return 0;
     // printVec(roster);
     // printVec(qBank);
 
     // cout << "Size of roster: " << roster.size() << endl; 
     // cout << "Size of qBank: " << qBank.size() << endl;
-
-    writeFile("Student_question_bank.csv",roster, qBank);
-
 }
 
 //------------------------DECLARATIONS-------------------------------------------
