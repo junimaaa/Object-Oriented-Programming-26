@@ -27,6 +27,11 @@ using namespace std;
 void promptFile(vector<string> &); 
 void printVec(vector<string>);
 
+bool readFile(string filename, vector<string> & vec);
+bool writeFile(string, const vector<string> &, const vector<string> &);
+int ranGen(int size); 
+
+
 /**
  * @brief randomly returns a number from 0 to 5.
  * - It is hardcoded to be from 0 to 5.
@@ -40,9 +45,12 @@ void printVec(vector<string>);
  * 
  * @return int: index of question
  */
-int ranGen(){
-    int randomNumber = rand() % 6;  // 0 through 5
-    return randomNumber;
+int ranGen(int questionSize){
+    random_device randomDevice;
+    mt19937 generator(randomDevice());
+    uniform_int_distribution<int> distribution(0, questionSize - 1);
+
+    return distribution(generator);
 }
 
 /**
