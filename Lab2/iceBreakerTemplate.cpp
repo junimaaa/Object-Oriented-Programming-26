@@ -63,21 +63,11 @@ bool readFile(string filename, vector<string> & vec) {
  * @param filename: string
  * @param v0: vector<string> (for students names)
  * @param v1: vector<string> (for questions)
- * 
- * TO DO: 
- * ​​​Return a bool instead in order to indicate whether the operation
- * succeeded or not
- * 
- * TO DO:
- * ​​Use pass by const reference (const vector<string> & v0, const vector<string> & v1)
- * as opposed to pass by value (vector<string> v0, vector<string> v1). 
- * 
- * What is the differennce between:
- * -  pass by reference (e.g. vector<string> & v0),
- * -  pass by value (e.g. vector<string> v0),
- * -  pass by const reference (e.g. const vector<string> & v0),
  */
-bool writeFile(string filename, vector<string> v0, vector<string> v1){
+
+/**added const reference from the porotype and return bool as it's notified if succeeded or not */
+
+bool writeFile(string filename, const vector<string> & v0, const vector<string> & v1){
 
     ofstream outputFile(filename);
      if (!outputFile) {
