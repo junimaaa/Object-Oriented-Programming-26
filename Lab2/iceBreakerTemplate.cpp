@@ -1,9 +1,15 @@
 #include<iostream>
 #include<fstream>
+#include <vector> 
+#include <cstdlib>
+#include <ctime> 
+#include <random> 
+
 /**
  * TO DO: 
  * Add <vector>, <cstdlib>, and <ctime>​
  */
+
 
 using namespace std;
 
