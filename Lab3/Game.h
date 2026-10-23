@@ -6,8 +6,6 @@
 #include <set>
 #include <vector> 
 
-using namespace std;
-
 class Game {
     public:
         Game();
