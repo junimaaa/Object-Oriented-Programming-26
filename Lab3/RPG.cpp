@@ -1,5 +1,8 @@
 #include "RPG.h"
 
+#include <iomanip>
+#include <iostream>
+#include <random>
 //Default constructor
 RPG::RPG() {
     name = "NPC";
