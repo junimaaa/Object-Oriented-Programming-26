@@ -105,7 +105,7 @@ void RPG::printStats() const {
          << "  Luck: " << luck 
          << "  Exp: " << exp 
          << "  Level: " << level 
-         << "  Status: " << ((isAlive) ? "Alive" : "Dead") 
+         << "  Status: " << (isAlive() ? "Alive" : "Dead") 
          << endl;
 }
 
