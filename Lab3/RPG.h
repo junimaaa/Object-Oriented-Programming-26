@@ -38,6 +38,8 @@ private:
     float exp; 
     int level;
 
+    ~RPG();
+    
 };
 
 #endif
