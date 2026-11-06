@@ -29,6 +29,6 @@ int main()
     //Charmander
     cout << "\n-------Print Stats-------\n";
     charlie.printStats();
-}
 
-return 0;
+    return 0;
+}
