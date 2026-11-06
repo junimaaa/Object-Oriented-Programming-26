@@ -11,6 +11,8 @@ class Pokemon{
         Pokemon();
         Pokemon(string name, int hp, int att, int def, vector<string> type);
         //mutator functions
+        virtual ~Pokemon() = default;
+        
         virtual void speak();
         virtual void printStats();
         //accessor functions

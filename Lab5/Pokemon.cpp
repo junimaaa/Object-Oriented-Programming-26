@@ -1,5 +1,7 @@
 #include <iostream> 
 #include "Pokemon.h"
+#include <cstdio>
+using namespace std;
 
 /**
  * @brief Construct a new pokemon:: pokemon object
@@ -24,9 +26,9 @@ Pokemon::Pokemon(){
 Pokemon::Pokemon(string name, int hp, int att, int def, vector<string> type){
     this->name = name;
     this->hp = hp; 
-    attack = att;
-    defense = def;
-    type = type;
+    this->attack = att;
+    this->defense = def;
+    this->type = type;
     cout << "Overloaded Constructor (Pokemon)\n";
 }
 

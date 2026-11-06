@@ -1,16 +1,5 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
+#include <string>
+#include <vector>
 #include <iostream>
 #include "Charmander.h"
 using namespace std;
@@ -41,3 +30,5 @@ int main()
     cout << "\n-------Print Stats-------\n";
     charlie.printStats();
 }
+
+return 0;
